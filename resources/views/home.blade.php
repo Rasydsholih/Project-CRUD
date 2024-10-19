@@ -2,8 +2,8 @@
 
 @section('content')
 <div class="container">
-    <h1>Selamat Datang di Sistem Warung</h1>
-    <p>Kelola barang dengan mudah menggunakan sistem CRUD.</p>
+    <h1>Selamat Datang di WPAD (warung pasti ada diskon)</h1>
+    <p>Pilih barang untuk memenuhi kebutuhan anda.</p>
     <a href="{{ route('barangs.index') }}" class="btn btn-primary">Lihat Data Barang</a>
 </div>
 @endsection
