@@ -33,8 +33,25 @@ Route::post('/users', [UserController::class, 'store'])->name('users.store');
 
 
 // Route untuk menampilkan barang diskon
-Route::get('/barang-diskon', function () {
-    return view('barang.diskon');
-})->name('barang.diskon');
+Route::get('/barangs-diskon', function () {
+    return view('barangs.diskon');
+})->name('barangs.diskon');
+
+
+
+Route::get('barangs', [BarangController::class, 'index'])->name('barangs.index');
+Route::get('barangs/create', [BarangController::class, 'create'])->name('barangs.create');
+Route::post('barangs', [BarangController::class, 'store'])->name('barangs.store'); // Ensure this line exists
+
+
+
+
+Route::get('/barang', [BarangController::class, 'index'])->name('barang.index');
+Route::get('/barang/create', [BarangController::class, 'create'])->name('barang.create');
+Route::post('/barang', [BarangController::class, 'store'])->name('barang.store');
+Route::get('/barang/{id}/edit', [BarangController::class, 'edit'])->name('barang.edit');
+Route::put('/barang/{id}', [BarangController::class, 'update'])->name('barang.update');
+Route::delete('/barang/{id}', [BarangController::class, 'destroy'])->name('barang.destroy');
+
 
 
